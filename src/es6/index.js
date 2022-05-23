@@ -73,3 +73,53 @@ console.log(globalVar);
 const a = 'b';
 a = 'a';
 console.log(a);
+
+let name = 'oscar';
+let age = 20;
+
+//es5
+obj = { name: name, age: age};
+/* name se pone en name y age en age */
+//es6
+obj2 = {name,age};
+/* imprimimos el obj2 */
+console.log(obj2);
+
+
+//arrow functions
+const names = [
+    {name: 'oscar ', age : 30},
+    {name:'yessica', age : 30}
+]
+let listOfNames = names.map(function (item){
+    console.log(item.name);
+})
+
+let listOfNames2 = names.map(item => console.log(item.name));
+
+const listOfNames3 = (name,age) => {
+    
+}
+const listOfNames4 = name => {
+
+}
+/* funcion que requiere un nuemero y me retorna su multiplicacion por el mismo  */
+const square = num => num * num;
+
+console.log(square(5));
+
+
+/* una promesa es como decir, en cual quier punto del programa que cambie algo has esto */
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if(true){
+            resolve("hey");
+        }else{
+            reject('ups');
+        }
+    });
+}
+
+helloPromise()
+    .then(Response => console.log(response)) 
+    .catch(error => console.log(error));
